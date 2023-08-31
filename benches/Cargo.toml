@@ -1,0 +1,17 @@
+[package]
+name = "unicode_validation_example_benches"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+unicode_validation_example = { path = "./../" }
+criterion = "0.5.1"
+
+[[bench]]
+name = "benches"
+harness = false
+
+[profile.bench]
+opt-level = 3
+lto = true
+overflow-checks = true
